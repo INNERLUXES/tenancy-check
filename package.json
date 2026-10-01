@@ -1,0 +1,47 @@
+{
+  "name": "tenancy-check",
+  "version": "1.0.0",
+  "description": "Check the SQL schema of a multi-tenant SaaS product: the tenant column on every table, never empty, in unique rules, foreign keys and indexes, and PostgreSQL row level security with policies. Reads a file, fetches nothing, no dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "tenancy-check": "bin/tenancy-check.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node bin/tenancy-check.js examples/schema.sql --tenant-table tenants --global plans"
+  },
+  "keywords": [
+    "saas",
+    "multi-tenant",
+    "tenant-isolation",
+    "postgresql",
+    "row-level-security",
+    "schema",
+    "sql",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/tenancy-check.git"
+  },
+  "homepage": "https://innerluxes.dev/software-development/saas"
+}

@@ -1,0 +1,6 @@
+# Every change is reviewed by a maintainer.
+* @innerluxesdev
+
+# The schema reader and the checks decide every finding the tool prints; changes need extra care.
+/src/schema.js @innerluxesdev
+/src/checks.js @innerluxesdev
